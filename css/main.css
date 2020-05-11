@@ -56,10 +56,17 @@ main .template__div {
   margin: 50px 0;
 }
 main ul {
+  padding: 10px 0;
   list-style: none;
+}
+main ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 main i {
   color: #66FF00;
   font-size: 20px;
-  margin: 0 0 0 50px;
+  margin: 0 0 0 150px;
+  cursor: pointer;
 }
