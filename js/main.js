@@ -8,7 +8,7 @@ $(document).ready( function() {
   var newTodoButton = $('.new__todo__button');
   var toDoLists = $('.todos');
   //API
-  var api = '157.230.17.132:3006/todos';
+  var api = 'http://157.230.17.132:3006/todos';
   //HANDLEBARS
   var source = $('#todo__template').html();
   var template = Handlebars.compile(source);
@@ -21,7 +21,7 @@ $(document).ready( function() {
 function printTodos(api, template, toDoLists) {
   toDoLists.empty();
   $.ajax({
-    url: 'http://157.230.17.132:3006/todos',
+    url: api,
     method: 'GET',
     success: (data) => {
       var todos = data;
