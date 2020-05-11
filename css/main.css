@@ -24,9 +24,12 @@ header h1 {
 }
 /* MAIN */
 main {
-  width: 80%;
-  margin: 0 auto;
+  width: 30%;
+  margin: 30px auto;
   color: white;
+  border: 1.5px solid #66FF00;
+  border-radius: 10px;
+  padding: 10px;
 }
 main .input__div {
   display: flex;
@@ -39,7 +42,9 @@ main .new__todo__input {
   font-size: 20px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  border: 1px solid #969696;
   outline: none;
+  background: #969696;
 }
 main .new__todo__button {
   width: 150px;
@@ -47,7 +52,8 @@ main .new__todo__button {
   font-size: 20px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  outline: none;
+  border: 1px solid #888;
+  background: #969696;
 }
 main .template__div {
   display: flex;
@@ -63,6 +69,8 @@ main ul li {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #66FF00;
 }
 main i {
   color: #66FF00;

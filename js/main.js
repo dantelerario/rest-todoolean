@@ -8,13 +8,43 @@ $(document).ready( function() {
   var newTodoButton = $('.new__todo__button');
   var toDoLists = $('.todos');
   //API
-  var api = 'http://157.230.17.132:3006/todos';
+  var api = 'http://157.230.17.132:3006/todos/';
   //HANDLEBARS
   var source = $('#todo__template').html();
   var template = Handlebars.compile(source);
   //GETLIST
   printTodos(api, template, toDoLists)
-
+  //ADD ITEM
+  newTodoButton.click( () => {
+    var todoVal = newTodoInput.val().trim();
+    $.ajax({
+      url: api,
+      method: 'POST',
+      data: {
+        text: todoVal
+      },
+      success: () => {
+        printTodos(api, template, toDoLists)
+      },
+      error: () => {
+        console.log('NEW ITEM ERROR');
+      }
+    });
+  });
+  //DELETE ITEM
+  $(document).on('click', '.cancel', function() {
+    var idCancel = $(this).data('id');
+    $.ajax({
+      url: api + idCancel,
+      method: 'DELETE',
+      success: () => {
+        printTodos(api, template, toDoLists);
+      },
+      error: () => {
+        console.log('DELETE ERROR');
+      },
+    });
+  });
 }); /* END DOCUMENT */
 
 //  FUNCTIONS
