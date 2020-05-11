@@ -4,20 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BoolZap - Dante L'Erario</title>
+  <title>TodOolean - Dante L'Erario</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" type='text/css'>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-
-
-
-
-
+    <header>
+      <h1>TODOOLEAN - Dante L'Erario</h1>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="input__div">
+        <input type="text" class="new__todo__input" placeholder="Inserisci nuova voce">
+        <button type="button" class="new__todo__button" name="button">INVIA</button>
+      </div>
+      <div class="template__div">
+        <ul class="todos">
+          <li class="todo">
+            {{ todo }}
+            <span class="delete" data-id="{{ id }}"><i class="far fa-trash-alt"></i></span>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <!-- HANDLEBARS -->
+    <script id="todo__template" type="text/x-handlebars-template">
+      <li class="todo">
+        {{ todo }}
+        <span class="delete" data-id="{{ id }}"><i class="far fa-trash-alt"></i></span>
+      </li>
+    </script>
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
     <script src="js/main.js"></script>
 </body>
 </html>

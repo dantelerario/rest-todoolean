@@ -1,7 +1,65 @@
 /* GENERAL SETTINGS */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  background: #000;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  margin: 0 auto;
+}
+header h1 {
+  margin: 50px;
+  color: #66FF00;
+  font-size: 40px;
+}
+/* MAIN */
+main {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+main .input__div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .new__todo__input {
+  width: 400px;
+  padding: 20px;
+  font-size: 20px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  outline: none;
+}
+main .new__todo__button {
+  width: 150px;
+  padding: 20px;
+  font-size: 20px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  outline: none;
+}
+main .template__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+main ul {
+  list-style: none;
+}
+main i {
+  color: #66FF00;
+  font-size: 20px;
+  margin: 0 0 0 50px;
 }
